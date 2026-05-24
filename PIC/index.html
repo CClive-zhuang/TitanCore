@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清单枢纽 - Steam清单与Lua密钥生成工具</title>
+    
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="static/css/all.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- Supabase CDN -->
+    <script src="static/js/supabase-js@2.js"></script>
+  </head>
+
+  <body class="bg-github-canvas text-github-fg">
+    <!-- 用户登录区域 右上角固定 -->
+    <div class="user-auth-fixed">
+      <div id="authSection">
+        <button id="loginBtn" class="btn-secondary">登录</button>
+        <button id="signupBtn" class="btn-primary">注册</button>
+      </div>
+    </div>
+
+    <!-- ===== 弹窗模块 ===== -->
+
+    <!-- 账号授权弹窗 -->
+    <div id="authModal" class="modal-overlay hidden">
+      <div class="auth-modal-wrapper">
+        <button id="closeAuthModal" class="auth-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="auth-header">
+          <img src="static/picture/test.png" alt="图标" class="auth-logo">
+          <h2 id="authTitle" class="auth-title">账号登录</h2>
+          <p class="auth-subtitle">登录你的清单枢纽账号</p>
+        </div>
+
+        <form id="authForm">
+          <div class="auth-input-group hidden" id="displayNameGroup">
+            <i class="fas fa-user"></i>
+            <input type="text" id="authDisplayName" class="auth-input" placeholder="昵称">
+          </div>
+          <div class="auth-input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="authEmail" class="auth-input" placeholder="电子邮箱" required="">
+          </div>
+          <div class="auth-input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="authPassword" class="auth-input" placeholder="密码" required="">
+          </div>
+          <button type="submit" id="authSubmitBtn" class="auth-submit-btn">
+            登录账号
+          </button>
+          <div id="authError" class="hidden"></div>
+
+          <div class="auth-form-divider">
+            <span id="authSwitchText">还没有账号？</span>
+            <button type="button" id="authSwitchBtn">立即注册</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- 免责声明弹窗 -->
+    <div id="disclaimerModal" class="modal-overlay hidden">
+      <div class="modal-content modal-disclaimer">
+        <div class="modal-disclaimer-content">
+          <div class="modal-disclaimer-icon-wrapper">
+            <i class="fas fa-balance-scale text-3xl modal-disclaimer-icon"></i>
+          </div>
+          <h2 class="text-2xl font-bold modal-disclaimer-heading">
+            免责声明
+          </h2>
+        </div>
+        <div class="text-left mb-8">
+          <p class="modal-disclaimer-text">
+            本网站仅用作信息查询参考。对于使用本站数据所产生的一切后果，本站不承担任何相关责任。
+          </p>
+        </div>
+        <div class="modal-disclaimer-checkbox-wrapper">
+          <input type="checkbox" id="dontShowAgain">
+          <label for="dontShowAgain">不再弹出此提示</label>
+        </div>
+        <button id="acceptDisclaimer" class="btn-primary">我已知悉</button>
+      </div>
+    </div>
+
+    <!-- 不支持游戏弹窗 -->
+    <div id="unsupportedModal" class="modal-overlay hidden">
+      <div class="modal-content modal-unsupported">
+        <div class="mb-4 flex items-center gap-2 unsupported-icon">
+          <i class="fas fa-exclamation-circle text-2xl"></i>
+          <h2 class="text-xl font-bold text-github-fg">暂不支持该游戏</h2>
+        </div>
+        <div class="text-left mb-6">
+          <p class="text-github-muted text-sm" id="unsupportedGameMessage"></p>
+        </div>
+        <button id="closeUnsupportedModal" class="btn-secondary w-full py-2 rounded font-semibold">
+          关闭
+        </button>
+      </div>
+    </div>
+
+    <!-- 已提交申请弹窗 -->
+    <div id="requestedModal" class="modal-overlay hidden">
+      <div class="modal-content modal-requested">
+        <div class="mb-4 flex items-center gap-2 info-icon">
+          <i class="fas fa-info-circle text-2xl"></i>
+          <h2 class="text-xl font-bold text-github-fg">已提交过申请</h2>
+        </div>
+        <div class="text-left mb-6">
+          <p class="text-github-muted text-sm" id="requestedGameMessage"></p>
+        </div>
+        <button id="closeRequestedModal" class="btn-secondary w-full py-2 rounded font-semibold">
+          关闭
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== 页面主体布局 ===== -->
+    <div class="page-wrapper">
+      <!--
+    <aside>
+      <h2>
+        <i class="fas fa-chart-line"></i> 下载排行榜前十
+      </h2>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>排名</th>
+              <th>游戏名称</th>
+            </tr>
+          </thead>
+          <tbody id="top10List">
+            <tr><td colspan="2">加载中...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </aside>
+    -->
+
+      <!-- ===== 中央主体内容 ===== -->
+      <main>
+        <header class="header-center">
+          <div class="header-logo-wrapper">
+            <img src="static/picture/test.png" alt="清单枢纽图标" class="header-logo">
+            <h1 class="header-title">清单枢纽（国内源版）</h1>
+          </div>
+          <p class="header-subtitle">
+            快速查询 Steam 清单的站点，提供 Lua 密钥生成和清单文件下载功能。数据来源于 SteamDB 和社区贡献，适用于离线使用和备份参考。
+          </p>
+        </header>
+
+        <!-- 状态提示框 -->
+        <div id="infoBox">
+          <i class="fas fa-circle-notch fa-spin"></i>
+          <span id="statusText">数据库加载中...</span>
+        </div>
+
+        <!-- 搜索栏 -->
+        <div class="search-container">
+          <div class="search-bar-wrapper">
+            <select id="searchEngineSelect" class="search-dropdown">
+              <option value="database">游戏名搜索</option>
+              <option value="legacy">游戏ID搜索</option>
+            </select>
+            <div class="search-input-wrapper">
+              <div class="search-icon-wrapper">
+                <i class="fas fa-search" id="searchIcon"></i>
+              </div>
+              <input type="text" id="mainSearchInput" placeholder="加载就绪，请稍候..." disabled="" class="input-github search-input-combo">
+            </div>
+            <button id="legacyCheckBtn" class="btn-primary">查询</button>
+          </div>
+
+          <!-- 数据库搜索结果 -->
+          <div id="searchResults" class="search-results hidden"></div>
+
+          <!-- 历史库终端输出 -->
+          <div id="legacyResultsSection" class="hidden">
+            <div class="terminal-text">
+              <pre id="legacyTerminalOutput"></pre>
+            </div>
+            <div id="legacyDownloadSection" class="hidden">
+              <a id="legacyDownloadLink" class="btn-primary" download="">
+                <i class="fas fa-download"></i>
+                下载清单文件
+              </a>
+            </div>
+            <div id="legacyLuaSection" class="hidden">
+              <div class="lua-suggestion-box">
+                <p class="lua-suggestion-text">
+                  该游戏已收录Lua密钥，可直接生成使用
+                </p>
+                <button id="legacyGenerateLuaBtn" class="btn-secondary">
+                  生成Lua密钥文件
+                </button>
+              </div>
+            </div>
+            <div id="legacyNotFoundSection" class="hidden">
+              <p class="error-text">
+                <i class="fas fa-exclamation-triangle"></i>未查询到对应清单
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 选中游戏详情面板 -->
+        <div id="selectedGamePanel" class="hidden">
+          <div class="game-panel-header">
+            <div class="game-info-wrapper">
+              <img id="selectedGameIcon" src="" alt="">
+              <div>
+                <h3 id="selectedGameName"></h3>
+                <p id="selectedGameId"></p>
+              </div>
+            </div>
+            <button id="downloadAllZipBtn" class="btn-primary">
+              <i class="fas fa-file-archive"></i> 打包全部下载
+            </button>
+          </div>
+          <div>
+            <h4 class="files-section-header">文件列表</h4>
+            <div id="availableFilesList"></div>
+          </div>
+        </div>
+
+        <!-- 游戏申请模块（已注释）
+        <div class="faq-wrapper" style="margin-top: 0; margin-bottom: 3rem;">
+          <button id="requestAccordionBtn" class="btn-secondary" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1rem; border-radius: 8px; border: 1px dashed #30363d; background: #161b22;">
+            <span style="font-weight: 700; display: flex; align-items: center; gap: 0.75rem;">
+              <i class="fas fa-paper-plane" style="color: #a371f7;"></i>
+              提交游戏收录申请
+            </span>
+            <i id="accordionIcon" class="fas fa-chevron-down" style="color: #8b949e; transition: transform 0.3s;"></i>
+          </button>
+
+          <div id="requestFormContainer" class="hidden" style="margin-top: 1rem; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem;">
+            <div id="cooldownContainer" class="hidden" style="margin-bottom: 1rem; font-size: 0.875rem; color: #d29922; background: rgba(210, 153, 34, 0.1); padding: 0.75rem; border-radius: 6px;">
+              <i class="fas fa-hourglass-half mr-1"></i> 冷却倒计时 <span id="cooldownSeconds" style="font-weight: 700;">60</span>秒后可再次提交
+            </div>
+
+            <form id="requestForm" action="https://manifesthub-bridge.sadabsiperkhan.workers.dev/" method="POST">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                <div>
+                  <label for="appid" style="display: block; font-size: 0.75rem; font-weight: 600; color: #8b949e; margin-bottom: 0.5rem; text-transform: uppercase;">游戏ID</label>
+                  <input type="text" id="appid" name="appId" placeholder="例如：220968" required class="input-github" style="width: 100%; height: 38px;">
+                </div>
+                <div>
+                  <label for="gamename" style="display: block; font-size: 0.75rem; font-weight: 600; color: #8b949e; margin-bottom: 0.5rem; text-transform: uppercase;">游戏名称</label>
+                  <input type="text" id="gamename" name="gameName" placeholder="例如：赛博朋克2077" required class="input-github" style="width: 100%; height: 38px;">
+                </div>
+              </div>
+              <button type="submit" id="submitRequestBtn" class="btn-primary" style="width: 100%; padding: 0.75rem; border-radius: 6px; font-weight: 700;">提交申请</button>
+              <p id="formFeedback" style="margin-top: 1rem; text-align: center; font-size: 0.875rem;"></p>
+            </form>
+          </div>
+        </div>
+        -->
+
+        <!-- 常见问题区域 -->
+        <div class="faq-wrapper">
+          <h2 class="faq-heading">常见问题</h2>
+
+          <!-- 不支持游戏提示 -->
+          <div class="warning-box">
+            <div class="warning-title">
+              <i class="fas fa-exclamation-triangle"></i>
+              <span>使用清单入库前须知不可使用功能告知</span>
+            </div>
+            <ul class="warning-list">
+              <li>
+                <i class="fas fa-globe"></i>
+                <span>需要全程联网、在线联机类的游戏</span>
+              </li>
+              <li>
+                <i class="fas fa-shield-alt"></i>
+                <span>带有D加密等高强度加密防护的游戏</span>
+              </li>
+              <li>
+                <i class="fas fa-window-restore"></i>
+                <span>带有第三方启动器的独占游戏（例如：EA、育碧、R星等）</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="faqContainer">
+            <!-- 问答内容由JS动态加载 -->
+          </div>
+        </div>
+
+        <!--
+      <div id="historySection" class="hidden">
+        <h2>
+          <i class="fas fa-history"></i> 我的下载记录
+        </h2>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>游戏名称</th>
+                <th>文件类型</th>
+                <th>下载时间</th>
+              </tr>
+            </thead>
+            <tbody id="historyList">
+              <tr><td colspan="3">记录加载中...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      --></main>
+    </div>
+
+<!-- 侧边悬浮快捷按钮 -->
+<div class="floating-sidebar">
+  <a href="https://steamdb.info/" target="_blank" class="floating-btn" title="Steam数据库查询">
+    <i class="fas fa-database"></i>
+    <span class="btn-label">SteamDB</span>
+  </a>
+  <a href="https://www.steamtools.net/" target="_blank" class="floating-btn" title="Steam工具箱">
+    <i class="fas fa-download"></i>
+    <span class="btn-label">Steamtools</span>
+  </a>
+  <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=JW%2FXSSk1To43UtI6AXGM%2FrzwME3JDy%2F5VrkVIlR20TWRgwt9KZPX%2FUG%2FduGVEBYN&busi_data=eyJncm91cENvZGUiOiIxMDgzNTExMzI5IiwidG9rZW4iOiI5c0dFSndSazdzTVBHd3pzd1BFWlNZRHNRNkZ2N1JVa084eFluc0pYRE9ObnB1RG5Pd0pEb3BvRm81a0hKa1U4IiwidWluIjoiMzE5MzcxMzMyOSJ9&data=9BjQqhBKQ4zYQwZvhN1t6lITH_biAUlNHZ7GdFCzeCmlCJP6QPOjvGFG5Jp9bwkMHzUQ0lZTZtNmA7XE6kT2h7KJNQWGcsaN5KZY_58L2W4&svctype=5&tempid=h5_group_info" target="_blank" class="floating-btn" title="QQ交流群">
+    <i class="fab fa-qq"></i>
+    <span class="btn-label">QQ交流群</span>
+  </a>
+</div>
+
+    <!-- 页脚 -->
+    <footer>
+      <p>
+        &copy; 2026 清单枢纽 | 制作团队
+        <a href="https://github.com/CClive-zhuang" target="_blank">D_chuan&CC直播落花生&mc.白云喵~</a>
+      </p>
+      <p>本站与Valve、Steam及其旗下产品无任何隶属关联。</p>
+    </footer>
+
+    <script src="static/js/jszip.min.js"></script>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>

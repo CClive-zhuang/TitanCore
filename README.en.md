@@ -12,8 +12,15 @@ English | [简体中文](./README.md)
 <h1 align="center">⬇️ Get the latest news, report bugs and share usage experience
 
 [![Bilibili](https://img.shields.io/badge/bilibili-Yr_Dd_GM-blue.svg?style=flat-square&logo=bilibili)](https://space.bilibili.com/1028735427?spm_id_from=333.337.search-card.all.click)
-[![QQ Group](https://img.shields.io/badge/QQ群-1083511329-blue.svg?style=flat-square&color=12b7f5&logo=qq)](https://qm.qq.com/q/8nUutpe6X)</h1>
-
+[![QQ群](https://img.shields.io/badge/QQ群-1083511329-blue.svg?style=flat-square&color=12b7f5&logo=qq)](https://qm.qq.com/q/8nUutpe6X)
+[![Release Version](https://img.shields.io/github/v/release/CClive-zhuang/TitanCore?style=flat-square)](https://github.com/CClive-zhuang/TitanCore/releases/latest)
+[![GitHub license](https://img.shields.io/github/license/CClive-zhuang/TitanCore?style=flat-square)](LICENSE)
+[![GitHub Star](https://img.shields.io/github/stars/CClive-zhuang/TitanCore?style=flat-square)](https://github.com/CClive-zhuang/TitanCore/stargazers)
+[![GitHub Fork](https://img.shields.io/github/forks/CClive-zhuang/TitanCore?style=flat-square)](https://github.com/CClive-zhuang/TitanCore/network/members)
+[![GitHub Repo Languages](https://img.shields.io/github/languages/top/CClive-zhuang/TitanCore?style=flat-square)](https://github.com/CClive-zhuang/TitanCore/search?l=c%23)
+[![NET 7.0](https://img.shields.io/badge/dotnet-7.0-purple.svg?style=flat-square&color=512bd4)](https://learn.microsoft.com/zh-cn/dotnet/core/whats-new/dotnet-7)
+[![C# 11](https://img.shields.io/badge/c%23-11-brightgreen.svg?style=flat-square&color=6da86a)](https://learn.microsoft.com/zh-cn/dotnet/csharp/whats-new/csharp-11)
+[![GitHub Star](https://img.shields.io/github/stars/CClive-zhuang/TitanCore.svg?logo=github)](https://github.com/CClive-zhuang/TitanCore)
 ## Project Introduction
 - Titan Core is a multi‑functional toolkit for bulk‑adding Steam games to library
 

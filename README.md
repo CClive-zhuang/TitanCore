@@ -7,8 +7,8 @@
 <h1 align="center">批量入库 · 一键更新 · 双引擎切换 · 3节点智能轮询</h1>
 别人还在找资源，你已经通关了。解压即用，3步开玩。
 
-
 ©作者主页&软件交流群
+<img width="750" height="750" alt="箭头蓝色向下_爱给网_aigei_com" src="https://github.com/user-attachments/assets/2b6db109-8110-488b-98f1-95170693d22b" />
 
 [![Bilibili](https://img.shields.io/badge/bilibili-Yr_Dd_GM-blue.svg?style=flat-square&logo=bilibili)](https://space.bilibili.com/1028735427?spm_id_from=333.337.search-card.all.click)
 [![QQ群](https://img.shields.io/badge/QQ群-1083511329-blue.svg?style=flat-square&color=12b7f5&logo=qq)](https://qm.qq.com/q/8nUutpe6X)

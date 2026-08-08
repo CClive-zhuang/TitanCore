@@ -1,5 +1,5 @@
-# Titan‑Core
-<img width="30" height="31" alt="程序图标" src="https://github.com/user-attachments/assets/038af1a0-6943-408f-bc06-f012c7179a92" />
+<h1 align="center">Titan‑Core</h1>
+<img width="127" height="126" alt="屏幕截图 2026-08-08 210418" src="https://github.com/user-attachments/assets/82297311-f670-4111-a73c-d9d535cb82a1" />
 <div align="center">
 
 # 批量入库 · 一键更新 · 双引擎切换 · 3节点智能轮询

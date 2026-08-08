@@ -19,9 +19,8 @@
 
 ## 🚀 下载渠道
 - [TITAN官网](https://tc.modvips.com/)【推荐】
-2. 移动、教育网备用双通道节点，适配校园网与移动宽带用户
-3. 蓝奏云网盘，提取密码：`hp7s`
-4. 夸克网盘，资源长期留存、定时校验文件完整性
+- [电信&联通直链下载](https://tc.gamefun365.com/d/tc/TitanCore1.9.4.zip?sign=67SiXlSSKtUqEEgeyFMvLrdhEIpSxz20u--Lc0JoGa8=:0)【主节点】
+- 
 
 ## ✨ V1.94‑完整版核心功能清单
 1. **7万+云端游戏资源库**

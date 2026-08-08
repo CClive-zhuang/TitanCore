@@ -1,4 +1,5 @@
-<h1 align="center">Titan Core 💠 </h1>
+<h1 align="center">Titan Core <img width="74" height="77" alt="image" src="https://github.com/user-attachments/assets/2ba7e9f1-a222-432f-9138-63d5bad45e0d" />
+ </h1>
 
 <div align="center">
 

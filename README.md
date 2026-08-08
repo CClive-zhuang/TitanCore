@@ -3,7 +3,6 @@
 
 <div align="center">
 
-[English](./README.en.md) | 简体中文
 
 <h1 align="center">批量入库 · 一键更新 · 双引擎切换 · 3节点智能轮询</h1>
  

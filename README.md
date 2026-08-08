@@ -19,8 +19,10 @@
 
 ## 🚀 下载渠道
 - [TITAN官网](https://tc.modvips.com/)【推荐】
-- [电信&联通直链下载](https://tc.gamefun365.com/d/tc/TitanCore1.9.4.zip?sign=67SiXlSSKtUqEEgeyFMvLrdhEIpSxz20u--Lc0JoGa8=:0)【主节点】
-- 
+- [电信&联通直链](https://tc.gamefun365.com/d/tc/TitanCore1.9.4.zip?sign=67SiXlSSKtUqEEgeyFMvLrdhEIpSxz20u--Lc0JoGa8=:0)【主节点】
+- [移动&教育网直链](https://tc.gamefun365.com/d/titan/titan/TitanCore1.9.4.zip?sign=Sebp6Q3NhZYHwnSZZQOaSy79Q7ziNodvmw4plIzW4so=:0)【备用节点】
+- [蓝奏云](https://wwbtg.lanzn.com/iFnEc40q67va)
+- [夸克网盘](https://pan.quark.cn/s/356f4ea70e49)
 
 ## ✨ V1.94‑完整版核心功能清单
 1. **7万+云端游戏资源库**

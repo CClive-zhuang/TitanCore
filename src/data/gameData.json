@@ -1,0 +1,131 @@
+{
+  "npc_dialogue": {
+    "merchant": {
+      "greetings": [
+        "零件涨价了，但看你顺眼，给你打个折。",
+        "新到的技能芯片，要看看吗？",
+        "我这儿的货，只卖给懂节奏的人。"
+      ],
+      "trade_success": [
+        "成交。下次带更好的节拍来。",
+        "明智的选择。",
+        "这玩意儿在战场上能救你一命。"
+      ],
+      "trade_fail": [
+        "钱不够？去刷两关再来。",
+        "我的货不赊账。"
+      ]
+    },
+    "mechanic": {
+      "greetings": [
+        "机体磨损了？我帮你调。",
+        "你的光剑频率有点飘，需要校准吗？"
+      ],
+      "upgrade": [
+        "推进器功率提升 15%。",
+        "关节润滑完成，动作更流畅了。"
+      ]
+    },
+    "easter_cat": {
+      "questions": [
+        {
+          "q": "摇滚和电音，哪个更强？",
+          "options": ["摇滚", "电音"],
+          "correct": 1,
+          "reward": "攻击力 +10%",
+          "reward_type": "atk_percent"
+        },
+        {
+          "q": "完美的节拍间隔是多少毫秒？（BPM 120）",
+          "options": ["250", "500", "1000"],
+          "correct": 1,
+          "reward": "判定宽容度 +0.02s",
+          "reward_type": "timing_bonus"
+        }
+      ],
+      "random": [
+        "你听过猫弹吉他的传说吗？节奏完美时能召唤彩虹。",
+        "提示：下一关的 BOSS 怕低频震动。",
+        "星空深处藏着被遗忘的机甲蓝图。",
+        "记住：闪避比格挡更省能量。"
+      ]
+    }
+  },
+  "pet_buffs": [
+    {
+      "id": "red_fury",
+      "name": "红骰·狂怒",
+      "color": "#ff0040",
+      "effect": "damage_percent",
+      "value": 25,
+      "desc": "伤害+25%，技能特效变大20%"
+    },
+    {
+      "id": "blue_shield",
+      "name": "蓝骰·护盾",
+      "color": "#00f3ff",
+      "effect": "damage_reduction",
+      "value": 20,
+      "desc": "受伤-20%，格挡时能量消耗减半"
+    },
+    {
+      "id": "green_beat",
+      "name": "绿骰·节拍",
+      "color": "#00ff88",
+      "effect": "timing_bonus",
+      "value": 0.05,
+      "desc": "判定宽容度+0.05s，连击数衰减变慢"
+    },
+    {
+      "id": "yellow_charge",
+      "name": "黄骰·充能",
+      "color": "#ffdd00",
+      "effect": "energy_gain",
+      "value": 30,
+      "desc": "能量获取+30%，技能冷却时间-15%"
+    },
+    {
+      "id": "purple_crit",
+      "name": "紫骰·暴击",
+      "color": "#a855f7",
+      "effect": "crit_rate",
+      "value": 20,
+      "desc": "暴击率+20%，暴击伤害+50%"
+    },
+    {
+      "id": "white_luck",
+      "name": "白骰·幸运",
+      "color": "#ffffff",
+      "effect": "drop_rate",
+      "value": 50,
+      "desc": "零件掉落+50%，商店价格-20%"
+    }
+  ],
+  "boss_templates": [
+    {
+      "id": "cyber_dj",
+      "name": "电音机甲 · Beat Titan",
+      "theme": "electronic",
+      "base_hp": 500,
+      "base_damage": 20,
+      "skills": ["sonic_punch", "laser_slash", "bass_drop"]
+    }
+  ],
+  "equipment": {
+    "weapons": [
+      { "id": "w1", "name": "青光刃", "damage": 25, "range": 130, "color": "#00f3ff" },
+      { "id": "w2", "name": "赤红斩", "damage": 35, "range": 110, "color": "#ff0040" },
+      { "id": "w3", "name": "紫电", "damage": 20, "range": 150, "color": "#a855f7" }
+    ],
+    "cores": [
+      { "id": "c1", "name": "超导核心", "hp_bonus": 30, "energy_bonus": 20 },
+      { "id": "c2", "name": "狂暴核心", "hp_bonus": 10, "damage_bonus": 15 },
+      { "id": "c3", "name": "均衡核心", "hp_bonus": 20, "energy_bonus": 15, "timing_bonus": 0.02 }
+    ],
+    "mods": [
+      { "id": "m1", "name": "节拍同步器", "timing_bonus": 0.03 },
+      { "id": "m2", "name": "残影发生器", "dash_clone": true },
+      { "id": "m3", "name": "能量回收器", "energy_on_hit": 5 }
+    ]
+  }
+}

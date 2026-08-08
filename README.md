@@ -4,10 +4,10 @@
 <div align="center">
 
 
-<h1 align="center">批量入库 · 一键更新 · 双引擎切换 · 3节点智能轮询
+<h1 align="center">批量入库 · 一键更新 · 双引擎切换 · 3节点智能轮询<h1>
 别人还在找资源，你已经通关了。解压即用，3步开玩。
 
-<h1>©作者主页&软件交流群
+©作者主页&软件交流群
 <h1>⬇️⬇️⬇️
 
 [![Bilibili](https://img.shields.io/badge/bilibili-Yr_Dd_GM-blue.svg?style=flat-square&logo=bilibili)](https://space.bilibili.com/1028735427?spm_id_from=333.337.search-card.all.click)

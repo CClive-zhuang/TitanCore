@@ -1,7 +1,5 @@
-<h1 align="center">Titan Core 
-	<img width="61" height="63" alt="屏幕截图 2026-08-08 200653" src="https://github.com/user-attachments/assets/fdc73991-48ca-481a-8b10-dbec93827dcd" />
+<h1 align="center">Titan Core <img width="15" height="15" alt="屏幕截图 2026-08-08 200653" src="https://github.com/user-attachments/assets/c86b2b0b-2456-4b6b-9b3c-4590e8f85dc8" />
 </h1>
- </h1>
 
 <div align="center">
 

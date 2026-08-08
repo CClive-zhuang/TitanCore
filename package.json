@@ -1,0 +1,124 @@
+{
+  "name": "TitanCore",
+  "version": "1.9.4",
+  "main": "dist-electron/main/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dist": "vite build && electron-builder",
+    "postinstall": "electron-rebuild -f -w better-sqlite3 -w bufferutil -w utf-8-validate"
+  },
+  "build": {
+    "electronDist": "node_modules/electron/dist",
+    "npmRebuild": false,
+    "nodeGypRebuild": false,
+    "appId": "com.TitanCore.app",
+    "productName": "TitanCore",
+    "compression": "maximum",
+    "electronLanguages": [
+      "zh-CN",
+      "en-US"
+    ],
+    "directories": {
+      "output": "release/${version}"
+    },
+    "files": [
+      "dist",
+      "dist-electron",
+      "build",
+      "!dist/**/*.map",
+      "!dist-electron/**/*.map",
+      "!node_modules/**/*.d.ts",
+      "!node_modules/**/*.map",
+      "!node_modules/**/*.md",
+      "!node_modules/**/LICENSE*",
+      "!node_modules/**/license*",
+      "!node_modules/**/.github/**/*",
+      "!node_modules/**/docs/**/*",
+      "!node_modules/**/test/**/*",
+      "!node_modules/**/tests/**/*",
+      "!node_modules/**/examples/**/*",
+      "!node_modules/**/scripts/**/*",
+      "!node_modules/**/.editorconfig",
+      "!node_modules/**/.gitignore",
+      "!node_modules/**/.travis.yml",
+      "!node_modules/**/package-lock.json",
+      "!node_modules/**/yarn.lock",
+      "!node_modules/**/Makefile",
+      "!node_modules/**/tsconfig.json",
+      "node_modules/better-sqlite3/build/**/*",
+      "node_modules/better-sqlite3/package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "asarUnpack": [
+      "node_modules/better-sqlite3/**",
+      "node_modules/bufferutil/**",
+      "node_modules/utf-8-validate/**",
+      "build/app.ico"
+    ],
+    "afterPack": "build/remove_dll.js",
+    "win": {
+      "icon": "build/app.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "include": "build/installer.nsh",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/app.ico",
+      "uninstallerIcon": "build/app.ico",
+      "installerSidebar": "build/installerSidebar.bmp",
+      "uninstallerSidebar": "build/installerSidebar.bmp",
+      "installerHeader": "build/installerHeader.bmp",
+      "removeDefaultUninstallWelcomePage": false
+    },
+    "copyright": "Copyright © 2026 Titan Core Studio. All rights reserved."
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.4",
+    "@tailwindcss/vite": "^4.3.1",
+    "@types/ws": "^8.5.12",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "axios": "^1.18.0",
+    "electron": "^42.4.1",
+    "electron-builder": "^26.15.3",
+    "pinia": "^3.0.4",
+    "pixi.js": "^8.19.0",
+    "sweetalert2": "^11.26.25",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.5",
+    "vite-plugin-electron": "^0.29.0",
+    "vue": "^3.5.38"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "bufferutil": "^4.1.0",
+    "utf-8-validate": "^6.0.6",
+    "ws": "^8.18.0"
+  },
+  "description": "Titan Core - Steam Game Assistant",
+  "author": "Titan Core Studio"
+}

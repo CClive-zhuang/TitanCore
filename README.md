@@ -12,7 +12,6 @@
 [![Bilibili](https://img.shields.io/badge/bilibili-Yr_Dd_GM-blue.svg?style=flat-square&logo=bilibili)](https://space.bilibili.com/1028735427?spm_id_from=333.337.search-card.all.click)
 [![QQ群](https://img.shields.io/badge/QQ群-1083511329-blue.svg?style=flat-square&color=12b7f5&logo=qq)](https://qm.qq.com/q/8nUutpe6X)</h1>
 
----
 
 ## 项目简介
 - Titan Core 是一款多功能Steam游戏批量入库工具箱，所有运行逻辑依托本地Steam客户端执行。

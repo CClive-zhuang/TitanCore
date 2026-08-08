@@ -5,7 +5,7 @@
 
 [English](./README.en.md) | 简体中文
 
-「Watt Toolkit」是一个开源跨平台的多功能游戏工具箱，此工具的大部分功能都是需要您下载安装 Steam 才能使用。
+批量入库 · 一键更新 · 双引擎切换 · 3节点智能轮询
  
 ![Release Download](https://img.shields.io/github/downloads/BeyondDimension/SteamTools/total?style=flat-square)
 [![Release Version](https://img.shields.io/github/v/release/BeyondDimension/SteamTools?style=flat-square)](https://github.com/BeyondDimension/SteamTools/releases/latest)

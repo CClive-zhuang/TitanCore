@@ -35,6 +35,12 @@
 2. **执行一键入库**：点击入库按钮等待程序自动处理；网络不稳定时末尾添加 `-2` 使用备用线路
 3. **重启Steam客户端**：游戏成功加载至你的库内；不需要时一键清理改动、恢复原生Steam环境
 
+## 🧩 截图
+<img width="2552" height="1524" alt="屏幕截图 2026-08-08 231425" src="https://github.com/user-attachments/assets/89b1a6fe-7b7e-448a-a1c5-6d636ec88bcc" />
+<img width="2555" height="1520" alt="屏幕截图 2026-08-08 231419" src="https://github.com/user-attachments/assets/3f8f8c8e-f5ce-4f90-9e58-1ab1b3fe0660" />
+<img width="2559" height="1520" alt="屏幕截图 2026-08-08 231413" src="https://github.com/user-attachments/assets/a02859e1-0189-4b75-8875-c9afbd4b38cc" />
+<img width="2558" height="1524" alt="屏幕截图 2026-08-08 231355" src="https://github.com/user-attachments/assets/fb01db1b-12e9-480b-ba66-5bb08ebac1e0" />
+<img width="2559" height="1524" alt="DBA39629017D917D61BF782796F75485" src="https://github.com/user-attachments/assets/03e9cc8f-a35a-4bee-86e2-6b047ab1b7cf" />
 
 ## ✨ 为什么选择 Titan Core
 1. **7万+云端游戏资源库**

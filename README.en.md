@@ -28,13 +28,12 @@ English | [简体中文](./README.md)
 - Windows 11
 - Windows 10 Version 1809 (OS Build 17763) or higher
 
-## 🚀 Download Channels
+## 🚀 Download Sources
 - [TITAN Official Website](https://tc.modvips.com/)【Recommended】
-- [Telecom & Unicom Direct Link](https://tc.gamefun365.com/d/tc/TitanCore1.9.4.zip?sign=67SiXlSSKtUqEEgeyFMvLrdhEIpSxz20u--Lc0JoGa8=:0)【Primary Node】
-- [Mobile & Education‑Network Direct Link](https://tc.gamefun365.com/d/titan/titan/TitanCore1.9.4.zip?sign=Sebp6Q3NhZYHwnSZZQOaSy79Q7ziNodvmw4plIzW4so=:0)【Backup Node】
-- [Lanzou Cloud](https://wwbtg.lanzn.com/iFnEc40q67va) (Password：hp7s)
-- [Quark Cloud Disk](https://pan.quark.cn/s/356f4ea70e49)
-
+- [Telecom & Unicom Direct Link](https://tc.gamefun365.com/d/tc/TitanCore1.9.5.zip?sign=vj6iflCyIkaTD-I3oNNmBrFZOtqJ9QT68vurN2t7aEI=:0)【Primary Node】
+- [Mobile & Education Network Direct Link](https://tc.gamefun365.com/d/titan/titan/TitanCore1.9.5.zip?sign=pgnN6AY0O9fR2KOySxP7KupEMIbycppPi4DAm8bV53c=:0)【Backup Node】
+- [Lanzou Cloud](https://wwbtg.lanzn.com/iPRPq41f8jfi) (Password: dc2c)
+- [Quark Cloud Drive](https://pan.quark.cn/s/7f37e522d125)
 ## 📖 Three‑Minute Quick‑Start Tutorial
 1. **Search for target game**: Launch the toolkit and input the game name or App‑ID. If any resource is missing, the program will automatically submit a supplement request in the background.
 2. **Run one‑click library addition**: Click the library‑adding button and wait for automatic processing. Append `-2` at the end when your network is unstable to use the backup line.

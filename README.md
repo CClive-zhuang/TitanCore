@@ -7,6 +7,8 @@
 
 [English](./README.en.md) | 简体中文
 
+<img width="400" height="300" alt="处理完成图片20260819223407" src="https://github.com/user-attachments/assets/4e012617-f204-409c-b3c0-a6f8a9249f5a" />
+
 </div>
 
 <h1 align="center">⬇️ 获取最新资讯、反馈BUG、交流使用心得

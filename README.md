@@ -43,6 +43,7 @@
 3. **重启Steam客户端**：游戏成功加载至你的库内；不需要时一键清理改动、恢复原生Steam环境
 
 ## 🧩 截图
+<img width="1080" height="720" alt="video-to-gif-1787149147877 (1)" src="https://github.com/user-attachments/assets/6eaa3891-7ef6-458b-8c8e-990960caabb3" />
 <img width="2552" height="1524" alt="屏幕截图 2026-08-08 231425" src="https://github.com/user-attachments/assets/89b1a6fe-7b7e-448a-a1c5-6d636ec88bcc" />
 <img width="2555" height="1520" alt="屏幕截图 2026-08-08 231419" src="https://github.com/user-attachments/assets/3f8f8c8e-f5ce-4f90-9e58-1ab1b3fe0660" />
 <img width="2559" height="1520" alt="屏幕截图 2026-08-08 231413" src="https://github.com/user-attachments/assets/a02859e1-0189-4b75-8875-c9afbd4b38cc" />

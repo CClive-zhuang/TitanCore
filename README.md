@@ -34,10 +34,10 @@
 
 ## 🚀 下载渠道
 - [TITAN官网](https://tc.modvips.com/)【推荐】
-- [电信&联通直链](https://tc.gamefun365.com/d/tc/TitanCore1.9.5.zip?sign=vj6iflCyIkaTD-I3oNNmBrFZOtqJ9QT68vurN2t7aEI=:0)【主节点】
-- [移动&教育网直链](https://tc.gamefun365.com/d/titan/titan/TitanCore1.9.5.zip?sign=pgnN6AY0O9fR2KOySxP7KupEMIbycppPi4DAm8bV53c=:0)【备用节点】
-- [蓝奏云](https://wwbtg.lanzn.com/iPRPq41f8jfi)（密码：dc2c)
-- [夸克网盘](https://pan.quark.cn/s/7f37e522d125)
+- [电信&联通直链](https://tc.gamefun365.com/d/tc/TitanCore1.9.6.zip?sign=ee5aGfNkCiSBr3xnizowkjMZLAXQuLoYBl4pEP9662Y=:0)【主节点】
+- [移动&教育网直链](https://tc.gamefun365.com/d/titan/titan/TitanCore1.9.6.zip?sign=3XD1cSYufp3_-1TLbtWtld6rDs0YVsckSgxG7EwgsaY=:0)【备用节点】
+- [夸克网盘](https://pan.quark.cn/s/05b4400b3350)
+- [百度网盘](https://pan.baidu.com/s/1P30LcaPjEDcPT7yR6rtkKQ?pwd=2exh)
 
 ## 📖 三分钟快速上手教程
 1. **检索目标游戏**：启动工具箱输入游戏名字或者App‑ID；碰到缺失资源程序会自动后台提交补录申请

@@ -39,7 +39,7 @@
 - [夸克网盘](https://pan.quark.cn/s/05b4400b3350)
 - [百度网盘](https://pan.baidu.com/s/1P30LcaPjEDcPT7yR6rtkKQ?pwd=2exh)
 
->  [!CAUTION]
+>  [!CAUTION]（使用工具前温馨提示）
 > 请支持正版游戏
 > 
 > 本软件仅用于游戏试玩、评测。

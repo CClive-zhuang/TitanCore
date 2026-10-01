@@ -15,6 +15,7 @@
 
 [![Bilibili](https://img.shields.io/badge/bilibili-Yr_Dd_GM-blue.svg?style=flat-square&logo=bilibili)](https://space.bilibili.com/1028735427?spm_id_from=333.337.search-card.all.click)
 [![QQ群](https://img.shields.io/badge/QQ群-1083511329-blue.svg?style=flat-square&color=12b7f5&logo=qq)](https://qm.qq.com/q/8nUutpe6X)
+[![爱发电](https://img.shields.io/badge/爱发电-TheFive-ea4aaa?style=flat-square&logo=github-sponsors)](https://afdian.com/a/TitanCore)
 [![Release Version](https://img.shields.io/github/v/release/CClive-zhuang/TitanCore?style=flat-square)](https://github.com/CClive-zhuang/TitanCore/releases/latest)
 [![GitHub license](https://img.shields.io/github/license/CClive-zhuang/TitanCore?style=flat-square)](LICENSE)
 [![GitHub Star](https://img.shields.io/github/stars/CClive-zhuang/TitanCore?style=flat-square)](https://github.com/CClive-zhuang/TitanCore/stargazers)
